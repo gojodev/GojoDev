@@ -1,0 +1,59 @@
+/* https://www.color-hex.com/color-palette/98179 */
+
+* {
+    font-size: 1.1rem;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+:root {
+    --accent: #007acc;
+    --bg-c-1: #3e3e42;
+    --bg-c-2: #2d2d30;
+    --main-bg-c: #252526;
+}
+
+body {
+    width: auto;
+    background-color: #252526;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    text-align: center;
+    margin: auto;
+    align-items: center;
+}
+
+
+
+#emmanuel-container {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+#emmanuel {
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid white;
+    transition: transform, 0.2s;
+}
+
+#emmanuel:hover {
+    transform: scale(1.05);
+}
+
+.bottom-images {
+    height: auto;
+    width: 100px;
+    transition: 0.2s;
+}
+
+.bottom-images:hover {
+    transform: scale(1.2);
+}
