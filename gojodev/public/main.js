@@ -1,4 +1,10 @@
-// slideshow -> https://www.w3schools.com/w3css/w3css_slideshow.asp
+
+/**
+ * slideshow -> https://www.w3schools.com/w3css/w3css_slideshow.asp
+ * https://github.com/Phineas/lanyard
+ * https://github.com/xaronnn/js-lanyard/
+ * https://htmx.org/
+ */
 
 function slideshow() {
     var i;
