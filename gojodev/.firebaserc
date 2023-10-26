@@ -11,5 +11,11 @@
       }
     }
   },
-  "etags": {}
+  "etags": {},
+  "rewrites": [
+    {
+      "source": "**",
+      "destination": "/index.html"
+    }
+  ]
 }
