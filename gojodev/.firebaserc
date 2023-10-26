@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "gojodev-fa28f"
-  }
+  },
+  "targets": {
+    "gojodev-fa28f": {
+      "hosting": {
+        "gojodev": [
+          "gojodev-fa28f"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
