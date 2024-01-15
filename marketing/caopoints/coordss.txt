@@ -1,0 +1,7 @@
+smaller screens:
+X: 652 , Y: 242
+W: 828, H: 942
+
+larger screens:
+X: 0, Y: 242
+W: 2133, H: 1521

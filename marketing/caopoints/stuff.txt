@@ -1,0 +1,14 @@
+App name:
+CAO Points Calculator
+
+Short Description:
+Shows the easiest way grades that are needed to get into College / University.
+
+Full Description:
+- Enter your CAO point target and subject levels to see the suggested grade averages and results required.
+
+- The tool saves time as it may be time-consuming to calculate a grade combination that you are comfortable with.
+
+- For example, imagine trying to find easy ways to score 400 CAO points with 4 higher level and 2 ordinary level subjects. The amount of trial and error needed would frustrate anyone.
+
+- The tool is also completely FREE to use and doesn't retain any of the user's inputted information.

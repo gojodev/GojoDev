@@ -1,22 +1,12 @@
-/* https://www.color-hex.com/color-palette/98179 */
-/* https://blinkzy.dev/ */
-
 * {
     font-size: 1.1rem;
     color: white;
     font-family: 'Courier New', Courier, monospace;
 }
 
-:root {
-    --accent: #007acc;
-    --bg-c-1: #3e3e42;
-    --bg-c-2: #2d2d30;
-    --main-bg-c: #252526;
-}
-
 body {
     width: auto;
-    background-color: #252526;
+    background-color: white;
 }
 
 a {
@@ -30,7 +20,6 @@ a {
 }
 
 
-
 footer {
     text-align: center;
     margin-top: 20px;
@@ -41,7 +30,7 @@ footer {
     max-width: 300px;
     height: auto;
     border-radius: 50%;
-    border: 5px solid white;
+    border: 5px solid black;
     transition: transform, 0.2s;
 }
 
@@ -57,4 +46,41 @@ footer {
 
 .bottom-images:hover {
     transform: scale(1.2);
+}
+
+#welcome {
+    margin: auto;
+    text-align: center;
+    transition: 0.5s;
+    background-color: black;
+    width: 50%;
+    padding: 5px;
+    border-radius: 20px;
+    position: relative;
+}
+
+#welcome:hover {
+    color: red;
+}
+
+.fadeIn {
+    animation: welcomeAni;
+    animation-duration: 1s;
+}
+
+@keyframes welcomeAni {
+    from {
+        opacity: 0;
+        transform: translate(0, -15px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.gradient-intro {
+    background-image: linear-gradient(45deg, yellow, #af4261);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

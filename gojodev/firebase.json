@@ -1,13 +1,17 @@
 {
-  "hosting": [
-    {
-      "target": "gojodev",
-      "public": "public",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ]
-    }
-  ]
+  "hosting": {
+    "target": "gojodev",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/caopoints/**",
+        "destination": "/caopoints/$1"
+      }
+    ]
+  }
 }
