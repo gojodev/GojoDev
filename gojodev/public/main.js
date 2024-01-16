@@ -6,14 +6,17 @@ function textSwitch() {
     const intervalId = setInterval(() => {
         let newText = phrase[currentIndex];
         if (currentIndex < phrase.length) {
-            console.log(newText);
-            text.innerHTML = newText
-            text.classList.toggle("fadeIn");
+
+            text.classList.remove("fadeIn");
+            text.offsetWidth;
+            text.classList.add("fadeIn");
+
+            text.innerHTML = newText;
             currentIndex++;
         } else {
             clearInterval(intervalId);
         }
-    }, 1000);
+    }, 1500);
 }
 
 textSwitch();
