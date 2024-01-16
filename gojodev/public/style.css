@@ -38,16 +38,35 @@ footer {
     transform: scale(1.05);
 }
 
-.footer-icons {
+.footer-icons-support,
+.footer-icons-tech {
+    opacity: 0;
     margin: 10px;
     transition: 0.2s;
 }
 
-.footer-icons:hover {
+.icon-orange,
+.icon-blue {
+    transition: 0.2s;
+}
+
+.icon-orange,
+.footer-icons-support:hover {
     background-image: linear-gradient(45deg, yellow, #af4261);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: scale(1.2);
+    transition: 0.2s;
+
+}
+
+.icon-blue,
+.footer-icons-tech:hover {
+    background-image: linear-gradient(45deg, cyan, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+    transition: 0.2s;
 }
 
 
@@ -62,16 +81,13 @@ footer {
     position: relative;
 }
 
-#welcome:hover {
-    color: red;
-}
-
 .fadeIn {
-    animation: welcomeAni;
-    animation-duration: 1s;
+    animation: fadeInAni;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
 }
 
-@keyframes welcomeAni {
+@keyframes fadeInAni {
     from {
         opacity: 0;
         transform: translate(0, -15px);
