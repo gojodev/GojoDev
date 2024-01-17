@@ -9,6 +9,7 @@ body {
     width: auto;
     background-color: white;
     font-family: 'Courier New', Courier, monospace;
+    min-width: 375px;
 }
 
 a {
@@ -22,22 +23,19 @@ a {
 }
 
 
-footer {
+#footer {
     text-align: center;
     margin-top: 20px;
     color: white;
 }
 
 #emmanuel {
-    max-width: 300px;
-    height: auto;
-    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    transition: 0.2s;
+    border-radius: 20px;
     border: 5px solid black;
     transition: transform, 0.2s;
-}
-
-#emmanuel:hover {
-    transform: scale(1.05);
 }
 
 .footer-icons-support,
@@ -100,15 +98,35 @@ footer {
     }
 }
 
+.jumpAnimation {
+    animation: jumpAni;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    opacity: 1;
+}
+
+@keyframes jumpAni {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(0, 15px);
+    }
+}
+
 .gradient-intro {
     background-image: linear-gradient(45deg, yellow, #af4261);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+
 .white {
     color: white;
 }
+
 
 .header {
     text-align: center;
@@ -120,23 +138,23 @@ footer {
     border-radius: 20px;
 }
 
-
-
-/* .orange-bg:hover {
+.orange-bg:hover {
     background-image: linear-gradient(45deg, yellow, #af4261);
-} */
+}
 
 .blue-bg:hover {
     background-image: linear-gradient(45deg, cyan, blue);
 }
 
 .pulseAnimation {
-    opacity: 0.85;
-
     animation-name: pulseAni;
     animation-duration: 1.5s;
-    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
     transition: 0.2s;
+}
+
+.pulseAnimation:hover {
+    transform: scale(1.05);
 }
 
 @keyframes pulseAni {
@@ -146,5 +164,47 @@ footer {
 
     to {
         opacity: 1;
+    }
+}
+
+.project-container {
+    overflow-wrap: break-word;
+    display: flexbox;
+    align-items: center;
+
+}
+
+.project {
+    display: flex;
+    border: 5px solid black;
+    border-radius: 20px;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+}
+
+.project-logo {
+    height: auto;
+    width: 125px;
+    margin: 15px;
+}
+
+.project-desc {
+    text-align: center;
+    margin: auto;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+    width: 70%;
+    height: auto;
+}
+
+@media screen and (max-width: 500px) {
+
+    .project,
+    .project-desc {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
     }
 }

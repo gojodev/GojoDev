@@ -11,5 +11,9 @@
   "description": "",
   "dependencies": {
     "firebase-tools": "^13.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-google": "^0.14.0"
   }
 }
