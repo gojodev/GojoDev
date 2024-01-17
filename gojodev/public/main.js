@@ -1,3 +1,5 @@
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
 function textSwitch() {
     let phrase = ["a programmer", "a gamer", "GojoDev"];
     let text = document.getElementById("text-switch");
@@ -22,7 +24,6 @@ function textSwitch() {
 textSwitch();
 
 
-// i'm still working on this
 function iconAni() {
     let icons = document.querySelectorAll("i");
     let index = 0;
@@ -32,6 +33,7 @@ function iconAni() {
             clearInterval(Iconinterval);
             return;
         }
+
         currentIcon.classList.add("fadeIn");
         index++;
 

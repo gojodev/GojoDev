@@ -1,12 +1,14 @@
 * {
     font-size: 1.1rem;
     color: black;
+    font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
 }
 
 body {
     width: auto;
     background-color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 a {
@@ -106,4 +108,43 @@ footer {
 
 .white {
     color: white;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    width: 300px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+
+
+/* .orange-bg:hover {
+    background-image: linear-gradient(45deg, yellow, #af4261);
+} */
+
+.blue-bg:hover {
+    background-image: linear-gradient(45deg, cyan, blue);
+}
+
+.pulseAnimation {
+    opacity: 0.85;
+
+    animation-name: pulseAni;
+    animation-duration: 1.5s;
+    animation-iteration-count: 3;
+    transition: 0.2s;
+}
+
+@keyframes pulseAni {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
