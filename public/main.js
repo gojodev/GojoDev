@@ -18,7 +18,7 @@ function textSwitch() {
         } else {
             clearInterval(Iconinterval);
         }
-    }, 1500);
+    }, 2000);
 }
 
 textSwitch();
@@ -80,4 +80,4 @@ function gojodev() {
     }, 3500)
 }
 
-gojodev()
+// gojodev()
