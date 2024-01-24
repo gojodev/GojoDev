@@ -1,8 +1,8 @@
+
 ```
-gojodev
+GojoDev
 ├─ .eslintrc.json
 ├─ .firebaserc
-├─ .gitignore
 ├─ firebase.json
 ├─ package-lock.json
 ├─ package.json
@@ -12,7 +12,10 @@ gojodev
 │  │  ├─ caopoints.webp
 │  │  ├─ emmanuel.webp
 │  │  ├─ favicon.ico
+│  │  ├─ GitHub.webp
 │  │  ├─ gojodev.webp
+│  │  ├─ kofi.webp
+│  │  ├─ LinkedIn.webp
 │  │  └─ questionMark.webp
 │  ├─ index.html
 │  ├─ main.js
