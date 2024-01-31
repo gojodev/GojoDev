@@ -41,6 +41,10 @@ a {
     object-position: center;
 }
 
+#emmanuel:hover {
+    transform: scale(1.05);
+}
+
 .footer-icons-support,
 .footer-icons-tech {
     opacity: 0;
