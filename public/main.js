@@ -40,7 +40,7 @@ function iconAni() {
 
             if (index < 3) {
                 currentIcon.classList.add("pulseAnimation");
-                currentIcon.style.animationDelay = `${index * 0.5}s`;
+                currentIcon.style.animationDelay = `${index * 0.3}s`;
                 currentIcon.classList.add("fadeIn");
             }
 

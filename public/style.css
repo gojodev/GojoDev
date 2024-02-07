@@ -1,6 +1,5 @@
 * {
     font-size: 1.1rem;
-    color: black;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -14,6 +13,9 @@ body {
 
 a {
     text-decoration: none;
+}
+a:visited {
+    color: white;
 }
 
 .container {
@@ -47,6 +49,7 @@ a {
 
 .footer-icons-support,
 .footer-icons-tech {
+    color: black;
     opacity: 0;
     margin: 10px;
     transition: 0.2s;
