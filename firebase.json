@@ -1,29 +1,10 @@
 {
   "hosting": {
-    "target": "gojodev",
-    "public": "public",
+    "public": "public/portfolio",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "headers": [
-      {
-        "source": "/gojodev/**",
-        "headers": [
-          {
-            "key": "Access-Control-Allow-Origin",
-            "value": "https://gojodev.com"
-          }
-        ]
-      }
-    ],
-    "cleanUrls": true,
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }
