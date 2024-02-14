@@ -10,7 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "firebase-tools": "^13.1.0"
+    "firebase-tools": "^9.23.3"
   },
   "devDependencies": {
     "eslint": "^8.56.0",

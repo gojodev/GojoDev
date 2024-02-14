@@ -7,10 +7,22 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "headers": [
+      {
+        "source": "/gojodev/**",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "https://gojodev.com"
+          }
+        ]
+      }
+    ],
+    "cleanUrls": true,
     "rewrites": [
       {
-        "source": "/caopoints/**",
-        "destination": "/caopoints/$1"
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   }
