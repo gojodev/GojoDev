@@ -1,4 +1,3 @@
-
 ```
 GojoDev
 ├─ .firebaserc
@@ -30,8 +29,7 @@ GojoDev
 │  │  ├─ package-lock.json
 │  │  ├─ package.json
 │  │  ├─ README.md
-│  │  ├─ resources.txt
-│  │  └─ serviceAccountKey.json
+│  │  └─ resources.txt
 │  └─ portfolio
 │     ├─ .eslintrc.json
 │     ├─ 404.html

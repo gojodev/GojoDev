@@ -9,6 +9,13 @@
           "gojodev-fa28f"
         ]
       }
+    },
+    "caopoints-info": {
+      "hosting": {
+        "caopoints-info": [
+          "caopoints-info"
+        ]
+      }
     }
   },
   "rewrites": [
