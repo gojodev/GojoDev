@@ -3,25 +3,14 @@
     "default": "gojodev-fa28f"
   },
   "targets": {
-    "gojodev-fa28f": {
-      "hosting": {
-        "gojodev": [
-          "gojodev-fa28f"
-        ]
-      }
-    },
-    "caopoints-info": {
-      "hosting": {
-        "caopoints-info": [
-          "caopoints-info"
-        ]
-      }
+    "hosting": {
+      "gojodev": [
+        "gojodev-fa28f"
+      ],
+      "caopoints": [
+        "caopoints-info"
+      ]
     }
   },
-  "rewrites": [
-    {
-      "source": "**",
-      "destination": "/index.html"
-    }
-  ]
+  "etags": {}
 }
