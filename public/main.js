@@ -26,10 +26,10 @@ textSwitch();
 
 function iconAni() {
     let icons = document.querySelectorAll("i");
-    let footer = document.getElementById("footer");
-    let footRect = footer.getBoundingClientRect();
+    let main = document.getElementById("main");
+    let mainRect = main.getBoundingClientRect();
 
-    if (footRect.top < -100) {
+    if (mainRect.top < -100) {
         let index = 0;
         let Iconinterval = setInterval(() => {
             let currentIcon = icons[index];
@@ -67,17 +67,19 @@ function gojodev() {
         emmanuel.offsetWidth;
         emmanuel.classList.add("fadeIn");
 
-        if (index == 0) {
+        if (index == 1) {
             emmanuel.style = "border-radius: 50%";
             emmanuel.src = "images/gojodev.webp";
-            index = 1;
+            index = 0;
         }
         else {
             emmanuel.style = "border-radius: 20px";
             emmanuel.src = "images/emmanuel.webp";
-            index = 0;
+            index = 1;
         }
-    }, 3500)
+
+        emmanuel.style.transition = "0.2s";
+    }, 3500);
 }
 
-// gojodev()
+gojodev()
