@@ -137,6 +137,12 @@ a:visited {
     color: black;
 }
 
+.black-bg {
+    padding: 10px;
+    background-color: black;
+    border-radius:  0px 20px 0px 0px;
+}
+
 .header {
     text-align: center;
     color: white;
@@ -187,6 +193,7 @@ a:visited {
     display: flex;
     border: 5px solid black;
     border-radius: 20px;
+    transform: scale(1.01);
     width: 80%;
     margin: auto;
     align-items: center;
@@ -205,15 +212,17 @@ a:visited {
     background-color: black;
     padding: 10px;
     border-radius: 20px;
-    width: 70%;
+    width: 45%;
     height: auto;
 }
 
 @media screen and (max-width: 500px) {
-
     .project,
     .project-desc {
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
+    }
+    .project {
+        width: 95%;
     }
 }
