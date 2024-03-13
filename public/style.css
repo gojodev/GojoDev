@@ -128,7 +128,6 @@ a:visited {
     -webkit-text-fill-color: transparent;
 }
 
-
 .white {
     color: white;
 }
@@ -213,16 +212,25 @@ a:visited {
     background-color: black;
     padding: 10px;
     border-radius: 20px;
-    width: 45%;
+    width: 50%;
     height: auto;
 }
 
+/* todo: show what techlogies you used for each project using "tags" */
+.tags {
+    background-image: linear-gradient(45deg, cyan, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+
+.tag-container {
+    display: flex;
+    align-items: center;
+}
+
 @media screen and (max-width: 500px) {
-    .project,
-    .project-desc {
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-    }
     .project {
         width: 95%;
     }

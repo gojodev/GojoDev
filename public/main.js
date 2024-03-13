@@ -82,4 +82,18 @@ function gojodev() {
     }, 3500);
 }
 
-gojodev()
+gojodev();
+
+function about_me() {
+    var bday = new Date("06/08/2004");
+    var today = new Date();
+  
+    // To calculate the time difference of two dates 
+    var time_diff = today.getTime() - bday.getTime();
+    time_diff = (time_diff / 1000) / 31556952;
+  
+    let age = time_diff.toFixed(3);
+    document.getElementById("founder-name").innerHTML = `Emmanuel Koledoye (~${age})`;
+  }
+  
+  about_me();
