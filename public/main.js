@@ -29,6 +29,8 @@ function iconAni() {
     let main = document.getElementById("main");
     let mainRect = main.getBoundingClientRect();
 
+    let projects = document.getElementsByClassName("project").length;
+
     if (mainRect.top < -100) {
         let index = 0;
         let Iconinterval = setInterval(() => {
@@ -38,16 +40,16 @@ function iconAni() {
                 return;
             }
 
-            if (index < 3) {
+            if (index < projects) {
                 currentIcon.classList.add("pulseAnimation");
-                currentIcon.style.animationDelay = `${index * 0.3}s`;
+                currentIcon.style.animationDelay = `${index * 0.1}s`;
                 currentIcon.classList.add("fadeIn");
             }
 
             else {
                 currentIcon.classList.add("fadeIn");
                 currentIcon.classList.add("jumpAnimation");
-                currentIcon.style.animationDelay = `${index * 0.3}s`;
+                currentIcon.style.animationDelay = `${index * 0.1}s`;
             }
 
             index++;
@@ -87,13 +89,12 @@ gojodev();
 function about_me() {
     var bday = new Date("06/08/2004");
     var today = new Date();
-  
-    // To calculate the time difference of two dates 
+
     var time_diff = today.getTime() - bday.getTime();
     time_diff = (time_diff / 1000) / 31556952;
-  
+
     let age = time_diff.toFixed(3);
     document.getElementById("founder-name").innerHTML = `Emmanuel Koledoye (~${age})`;
-  }
-  
-  about_me();
+}
+
+about_me();
