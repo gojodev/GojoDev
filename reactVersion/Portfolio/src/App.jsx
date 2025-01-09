@@ -1,11 +1,29 @@
-import './App.css'
-import './components/Welcome'
-import Welcome from './components/Welcome'
+import "./App.css";
+import Footer from "./components/Footer";
+import GojoDev from "./components/GojoDev.jsx";
+import MetaTags from "./components/MetaTags.tsx";
+import "./components/Welcome";
+import Welcome from "./components/Welcome";
+
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   return (
-    <Welcome></Welcome>
-  )
+    <div>
+      <div id="intro">
+        <div className="width50">
+          <Welcome></Welcome>
+        </div>
+
+        <GojoDev></GojoDev>
+      </div>
+
+      <HelmetProvider>
+        <MetaTags />
+        <Footer />
+      </HelmetProvider>
+    </div>
+  );
 }
 
-export default App
+export default App;

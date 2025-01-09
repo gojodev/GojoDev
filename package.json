@@ -3,6 +3,7 @@
     "build": "node ./esbuild.config.js"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "darkreader": "^4.9.73",
     "firebase": "^10.7.1",
     "firebase-admin": "^12.2.0",

@@ -1,4 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faHouse, faLinkedin, faGithub, faEnvelope);
 
 const Welcome = () => {
   const [currentText, setCurrentText] = useState("a programmer");
@@ -6,20 +13,17 @@ const Welcome = () => {
   const phrases = ["a programmer", "a gamer", "GojoDev"];
   let index = 0;
 
-
-// I have to use useEffect so that everything gets rendered properly every 2s
   useEffect(() => {
     const intervalId = setInterval(() => {
       setFadeClass("");
       setTimeout(() => {
         if (index < 3) {
           setCurrentText(phrases[index]);
-          console.log(phrases[index],index)
+          console.log(phrases[index], index);
           setFadeClass("fadeIn");
           index++;
-        }
-        else {
-          setCurrentText("GojoDev")
+        } else {
+          setCurrentText("GojoDev");
           clearInterval(intervalId);
         }
       }, 0);
@@ -29,11 +33,32 @@ const Welcome = () => {
   }, []);
 
   return (
-    <div id="welcome" className="fadeIn box-shadow">
-      <h2 className="white">Hi, I'm </h2>
-      <h2 id="text-switch" className={`gradient-text ${fadeClass}`}>
-        {currentText}
-      </h2>
+    <div id="welcome">
+      <h3 className="white">Hi, I'm </h3>
+      <h3 className={`gradient-text ${fadeClass}`}>{currentText}</h3>
+      <h3 className="white">Software Development Student</h3>
+
+      <div>
+        <a
+          href="https://www.linkedin.com/in/emmanuelk421"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={["fab", "linkedin"]} size="3x" />
+        </a>
+        <a
+          href="https://github.com/gojodev/GojoDev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={["fab", "github"]} size="3x" />
+        </a>
+      </div>
+
+      <div className="container-h">
+        <h2 className="white">gojo@gojodev.com</h2>
+        <FontAwesomeIcon icon={["fas", "envelope"]} size="3x" />
+      </div>
     </div>
   );
 };

@@ -34,7 +34,16 @@ Portfolio
 │     │  ├─ assets
 │     │  │  └─ react.svg
 │     │  ├─ components
+│     │  │  ├─ ImageContainer.tsx
 │     │  │  └─ Welcome.tsx
+│     │  ├─ images
+│     │  │  ├─ caopoints.webp
+│     │  │  ├─ emmanuel.webp
+│     │  │  ├─ favicon.ico
+│     │  │  ├─ gojodev.webp
+│     │  │  ├─ questionMark.webp
+│     │  │  ├─ sfx_rocks.webp
+│     │  │  └─ swipeBack.png
 │     │  ├─ index.css
 │     │  └─ main.jsx
 │     └─ vite.config.js
