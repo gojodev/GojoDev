@@ -34,9 +34,9 @@ const Welcome = () => {
 
   return (
     <div id="welcome">
-      <h3 className="white">Hi, I'm </h3>
-      <h3 className={`gradient-text ${fadeClass}`}>{currentText}</h3>
-      <h3 className="white">Software Development Student</h3>
+      <h3 className="white generalText">Hi, I'm </h3>
+      <h3 className={`gradient-text ${fadeClass} generalText`}>{currentText}</h3>
+      <h3 className="white generalText">Software Development Student</h3>
 
       <div>
         <a
@@ -44,20 +44,20 @@ const Welcome = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={["fab", "linkedin"]} size="3x" />
+          <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
         </a>
         <a
           href="https://github.com/gojodev/GojoDev"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={["fab", "github"]} size="3x" />
+          <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
         </a>
       </div>
 
       <div className="container-h">
-        <h2 className="white">gojo@gojodev.com</h2>
-        <FontAwesomeIcon icon={["fas", "envelope"]} size="3x" />
+        <h2 className="white generalText">gojo@gojodev.com</h2>
+        <FontAwesomeIcon icon={["fas", "envelope"]} size="2x" />
       </div>
     </div>
   );

@@ -30,6 +30,9 @@ function MetaTags() {
         content="web development, programming, software development, projects, GojoDev, Caopoints, Caopoints"
       />
       <meta name="author" content="Emmanuel Koledoye" />
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      
     </Helmet>
   );
 }

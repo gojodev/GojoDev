@@ -1,4 +1,4 @@
-import "./App.css";
+import "./index.css";
 import Footer from "./components/Footer";
 import GojoDev from "./components/GojoDev.jsx";
 import MetaTags from "./components/MetaTags.tsx";
