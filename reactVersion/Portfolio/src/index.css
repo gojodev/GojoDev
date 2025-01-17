@@ -1,11 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   font-size: 1.1rem;
   font-family: "Courier New", Courier, monospace;
-}
-
-body {
-  width: 100%;
-  background-color: white;
+  --white: white;
+  --black: black;
 }
 
 .fadeIn {
@@ -25,21 +26,21 @@ body {
   }
 }
 
-#welcome {
-  margin: auto;
+.generalBlackBG {
   text-align: center;
   transition: 0.5s;
-  background-color: black;
+
+  background-color: var(--black);
   padding: 5px;
   border-radius: 20px;
 }
 
 .white {
-  color: white;
+  color: var(--white);
 }
 
 .black-bg {
-  background-color: black;
+  background-color: var(--black);
 }
 
 .box-shadow {
@@ -60,14 +61,14 @@ body {
 
 .Image-comp {
   border-radius: 20px;
-  border: 5px solid black;
+  border: 5px solid var(--black);
   border-radius: 50%;
   object-fit: cover;
   transition: 0.2s;
   text-align: center;
 }
 
-#intro {
+.center {
   display: flex;
   align-items: center;
 }
@@ -75,18 +76,15 @@ body {
 .container-v {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .container-h {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 
 svg {
-  color: white;
+  color: var(--white);
   margin: 10px;
   transition: 0.2s;
 }

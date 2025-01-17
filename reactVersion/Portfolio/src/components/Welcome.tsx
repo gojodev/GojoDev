@@ -33,9 +33,11 @@ const Welcome = () => {
   }, []);
 
   return (
-    <div id="welcome">
+    <div className="generalBlackBG box-shadow container-v">
       <h3 className="white generalText">Hi, I'm </h3>
-      <h3 className={`gradient-text ${fadeClass} generalText`}>{currentText}</h3>
+      <h3 className={`gradient-text ${fadeClass} generalText`}>
+        {currentText}
+      </h3>
       <h3 className="white generalText">Software Development Student</h3>
 
       <div>
@@ -55,7 +57,7 @@ const Welcome = () => {
         </a>
       </div>
 
-      <div className="container-h">
+      <div className="center">
         <h2 className="white generalText">gojo@gojodev.com</h2>
         <FontAwesomeIcon icon={["fas", "envelope"]} size="2x" />
       </div>

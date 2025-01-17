@@ -5,10 +5,16 @@ interface Props {
   src: string;
 }
 
-const Image = ({ src, dim="200px" }: Props) => {
+const Image = ({ src, dim = "200px" }: Props) => {
   return (
     <div>
-      <img src={src} alt="image" className="Image-comp fadeIn" width={dim} height={dim} />
+      <img
+        src={src}
+        alt="image"
+        className="Image-comp fadeIn box-shadow"
+        width={dim}
+        height={dim}
+      />
     </div>
   );
 };
