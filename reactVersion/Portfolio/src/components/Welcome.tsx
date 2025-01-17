@@ -33,7 +33,7 @@ const Welcome = () => {
   }, []);
 
   return (
-    <div className="generalBlackBG box-shadow container-v">
+    <div className="generalBlackBG box-shadow container-v hoverEffect w-[33%]">
       <h3 className="white generalText">Hi, I'm </h3>
       <h3 className={`gradient-text ${fadeClass} generalText`}>
         {currentText}
@@ -46,20 +46,20 @@ const Welcome = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
+          <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" className="pulseAnimation" />
         </a>
         <a
           href="https://github.com/gojodev/GojoDev"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
+          <FontAwesomeIcon icon={["fab", "github"]} size="2x" className="pulseAnimation"/>
         </a>
       </div>
 
       <div className="center">
-        <h2 className="white generalText">gojo@gojodev.com</h2>
-        <FontAwesomeIcon icon={["fas", "envelope"]} size="2x" />
+        <h2 className="white generalText blueText">gojo@gojodev.com</h2>
+        <FontAwesomeIcon icon={["fas", "envelope"]} size="2x" className="pulseAnimation" />
       </div>
     </div>
   );

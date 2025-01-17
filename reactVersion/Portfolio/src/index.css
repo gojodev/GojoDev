@@ -32,7 +32,15 @@
 
   background-color: var(--black);
   padding: 5px;
-  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.hoverEffect {
+  transform: scale(1);
+}
+
+.hoverEffect:hover {
+  transform: scale(1.02);
 }
 
 .white {
@@ -52,25 +60,34 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-  transition: 0.2s;
 }
 
-.gradient-text:hover {
+.blueText {
   background-image: linear-gradient(45deg, cyan, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 .Image-comp {
-  border-radius: 20px;
   border: 5px solid var(--black);
-  border-radius: 50%;
   object-fit: cover;
-  transition: 0.2s;
+  transition: 0.2s ease;
   text-align: center;
+}
+
+.rb20px {
+  border-radius: 20px;
+}
+
+.rbbl {
+  border-bottom-left: 20px;
 }
 
 .center {
   display: flex;
   align-items: center;
+  margin: auto;
 }
 
 .container-v {
@@ -114,4 +131,31 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+.pulseAnimation {
+  animation-name: pulseAni;
+  animation-duration: 1.5s;
+  animation-iteration-count: 3;
+  transition: 0.2s;
+}
+
+@keyframes pulseAni {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.pulseAnimation:hover {
+  transform: scale(1.05);
+}
+
+
+path {
+  color: var(--white);
+  transition: all 0.2s;
 }

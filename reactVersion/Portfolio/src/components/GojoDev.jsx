@@ -22,10 +22,12 @@ const GojoDev = () => {
   const age = time_diff.toFixed(3);
 
   return (
-    <div className="container-h">
-      <Image src={status ? avater : pfp} className="width50" />
-      <div className="width50">
-        <h2 className="generalText">Emmanuel Koledoye (~{age})</h2>
+    <div className="center w-[33%]">
+      <div className="center">
+        <Image src={status ? avater : pfp} />
+      </div>
+      <div className="center">
+        <h2 className=" generalText">Emmanuel Koledoye (~{age})</h2>
       </div>
     </div>
   );

@@ -10,25 +10,24 @@ import { HelmetProvider } from "react-helmet-async";
 function App() {
   return (
     <div>
-      <div className="center">
-        <Welcome className="w-[33%]"></Welcome>
+      <div className="container-h">
+        <Welcome />
 
-        <GojoDev className="w-[33%]"></GojoDev>
+        <GojoDev />
 
-        <div className="generalBlackBG white generalText box-shadow w-[33%]">
-          {
-            "I create helpful websites and programming scripts. I'm a 3rd year software development student. I make projects about things that I want to improve or interest me."
-          }
+        <div className="generalBlackBG white generalText box-shadow w-[33%] container-v hoverEffect">
+          <div className="center">
+            {
+              "I create helpful websites and programming scripts. I'm a 3rd year software development student. I make projects about things that I want to improve or interest me."
+            }
+          </div>
         </div>
       </div>
 
       <br />
       <br />
 
-
-      <div className="white generalText bg-black p-3">
-        Projects
-      </div>
+      <div className="white generalText bg-black p-3">Projects</div>
 
       <HelmetProvider>
         <MetaTags />
