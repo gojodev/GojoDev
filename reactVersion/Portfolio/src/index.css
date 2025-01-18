@@ -33,6 +33,7 @@
   background-color: var(--black);
   padding: 5px;
   transition: 0.2s;
+  box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 .hoverEffect {
@@ -40,7 +41,7 @@
 }
 
 .hoverEffect:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 .white {
