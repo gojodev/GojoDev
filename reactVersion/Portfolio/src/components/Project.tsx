@@ -23,21 +23,23 @@ const Project = ({
   name,
   techStack,
 }: Props) => {
-  const displayOrHide = webLink == "" ? "hidden" : "inline-block";
+  const displayOrHide =
+    webLink == "" || webLink == undefined ? "hidden" : "inline-block";
   return (
-    <div className="center mt-4">
-      <div className="container-v w-[20%]">
-        <div className="center">
-          <Image src={img} dim="150px" />
+    <div className="center mt-4 w-[80%]">
+      <div className="container-v w-[250px] h-[250px]">
+        <div className="center w-[100%]">
+          <div className="center">
+            <Image src={img} dim="150px" />
+          </div>
         </div>
-        <div className="center generalText white bg-black p-2 rb20px mt-3 box-shadow">
-          {name}
+        <div className="center generalText white bg-black p-2 rb20px mt-3 box-shadow w-[80%]">
+          <div className="center">{name}</div>
         </div>
       </div>
-      <div className="generalBlackBG white container-v w-[80%] rb20px">
-        <div className="w-[auto]">
+      <div className="generalBlackBG white container-v w-[80%] rb20px center">
+        <div>
           <div className="generalText">{desc}</div>
-
           <div className="container-h center">
             <div className="w-[50%]">
               <a href={github} target="_blank">

@@ -25,11 +25,7 @@ function App() {
         </div>
       </div>
 
-      <br />
-
-      <div className="white generalText bg-black p-3 box-shadow">Projects</div>
-
-      <br />
+      <div className="white generalText bg-black p-3 box-shadow mt-4">Projects</div>
 
       <div className="container-v">
         <Project
@@ -45,7 +41,6 @@ function App() {
           img="./images/swipeBack.png"
           desc="An extension for finger gestures to navigate tabs in Opera GX (Coming Soon)"
           github="https://github.com/gojodev/swipeBack"
-          webLink=""
           name="SwipeBack"
           techStack="HTML, CSS, JS"
         />
