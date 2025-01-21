@@ -6,6 +6,8 @@ yarn-debug.log*
 yarn-error.log*
 firebase-debug.log*
 firebase-debug.*.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # Firebase cache
 .firebase/
@@ -46,6 +48,9 @@ build/Release
 
 # Dependency directories
 node_modules/
+dist
+dist-ssr
+*.local
 
 # Optional npm cache directory
 .npm
@@ -70,3 +75,15 @@ node_modules/
 
 # ignore yoke
 .vscode
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+build

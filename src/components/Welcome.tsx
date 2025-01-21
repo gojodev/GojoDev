@@ -33,37 +33,41 @@ const Welcome = () => {
   }, []);
 
   return (
-    <div className="generalBlackBG container-v hoverEffect w-[33%]">
-      <h3 className="white generalText">Hi, I'm </h3>
-      <h3 className={`gradient-text ${fadeClass} generalText`}>
-        {currentText}
-      </h3>
-      <h3 className="white generalText">Software Development Student</h3>
-
+    <div className="generalBlackBG container-v w-[30%] rounded-br-3xl">
       <div>
-        <a href="https://www.linkedin.com/in/emmanuelk421" target="_blank">
-          <FontAwesomeIcon
-            icon={["fab", "linkedin"]}
-            size="2x"
-            className="pulseAnimation"
-          />
-        </a>
-        <a href="https://github.com/gojodev/GojoDev" target="_blank">
-          <FontAwesomeIcon
-            icon={["fab", "github"]}
-            size="2x"
-            className="pulseAnimation"
-          />
-        </a>
-      </div>
+        <h3 className="white generalText">Hi, I'm </h3>
+        <h3 className={`gradient-text ${fadeClass} generalText`}>
+          {currentText}
+        </h3>
+        <h3 className="white generalText">Software Development Student</h3>
 
-      <div className="center">
-        <h2 className="white generalText blueText">gojo@gojodev.com</h2>
-        <FontAwesomeIcon
-          icon={["fas", "envelope"]}
-          size="2x"
-          className="pulseAnimation"
-        />
+        <div>
+          <a href="https://www.linkedin.com/in/emmanuelk421" target="_blank">
+            <FontAwesomeIcon
+              icon={["fab", "linkedin"]}
+              size="2x"
+              className="pulseAnimation"
+            />
+          </a>
+          <a href="https://github.com/gojodev/GojoDev" target="_blank">
+            <FontAwesomeIcon
+              icon={["fab", "github"]}
+              size="2x"
+              className="pulseAnimation"
+            />
+          </a>
+        </div>
+
+        <div className="center">
+          <div className="center">            
+          <h2 className="white generalText blueText">gojo@gojodev.com</h2>
+          <FontAwesomeIcon
+            icon={["fas", "envelope"]}
+            size="2x"
+            className="pulseAnimation"
+          />
+          </div>
+        </div>
       </div>
     </div>
   );

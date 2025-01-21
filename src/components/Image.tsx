@@ -7,7 +7,7 @@ interface Props {
 
 const Image = ({ src, dim = "200px" }: Props) => {
   return (
-    <div>
+    <div className={`w-[${dim}] h-[${dim}]`}>
       <img
         src={src}
         alt="Image"

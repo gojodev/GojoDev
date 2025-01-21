@@ -23,8 +23,8 @@ const Project = ({
   name,
   techStack,
 }: Props) => {
-  const displayOrHide =
-    webLink == "" || webLink == undefined ? "hidden" : "inline-block";
+  const webLinkStyle = webLink == undefined ? "hidden" : "inline-block";
+  const githubStyle = github == undefined ? "hidden" : "inline-block";
   return (
     <div className="center mt-4 w-[80%]">
       <div className="container-v w-[250px] h-[250px]">
@@ -37,8 +37,8 @@ const Project = ({
           <div className="center">{name}</div>
         </div>
       </div>
-      <div className="generalBlackBG white container-v w-[80%] rb20px center">
-        <div>
+      <div className="generalBlackBG container-v white w-[80%] rb20px center min-h-[150px]">
+        <div className="m-auto w-[100%]">
           <div className="generalText">{desc}</div>
           <div className="container-h center">
             <div className="w-[50%]">
@@ -46,7 +46,7 @@ const Project = ({
                 <FontAwesomeIcon
                   icon={["fab", "github"]}
                   size="2x"
-                  className="pulseAnimation"
+                  className={`${githubStyle} pulseAnimation`}
                 />
               </a>
 
@@ -54,7 +54,7 @@ const Project = ({
                 <FontAwesomeIcon
                   icon={["fas", "globe"]}
                   size="2x"
-                  className={displayOrHide + " pulseAnimation"}
+                  className={`${webLinkStyle} pulseAnimation`}
                 />
               </a>
             </div>

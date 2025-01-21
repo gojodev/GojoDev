@@ -554,12 +554,20 @@ video {
   display: none;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .inline-block {
@@ -570,8 +578,16 @@ video {
   display: none;
 }
 
+.h-\[150px\] {
+  height: 150px;
+}
+
 .h-\[250px\] {
   height: 250px;
+}
+
+.min-h-\[150px\] {
+  min-height: 150px;
 }
 
 .w-\[100\%\] {
@@ -580,6 +596,10 @@ video {
 
 .w-\[250px\] {
   width: 250px;
+}
+
+.w-\[30\%\] {
+  width: 30%;
 }
 
 .w-\[33\%\] {
@@ -592,6 +612,41 @@ video {
 
 .w-\[80\%\] {
   width: 80%;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-l {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-b {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-r {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.rounded-br {
+  border-bottom-right-radius: 0.25rem;
+}
+
+.rounded-br-3xl {
+  border-bottom-right-radius: 1.5rem;
+}
+
+.rounded-bl {
+  border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-bl-3xl {
+  border-bottom-left-radius: 1.5rem;
 }
 
 .bg-black {
@@ -726,7 +781,6 @@ svg:hover {
 }
 
 footer {
-  position: fixed;
   text-align: center;
   bottom: 0;
   left: 0;
