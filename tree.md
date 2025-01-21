@@ -1,4 +1,3 @@
-
 ```
 Portfolio
 ├─ .firebaserc
@@ -17,7 +16,6 @@ Portfolio
 │  │  ├─ sfx_rocks.webp
 │  │  └─ swipeBack.png
 │  └─ vite.svg
-├─ README.md
 ├─ src
 │  ├─ App.jsx
 │  ├─ components
@@ -31,6 +29,7 @@ Portfolio
 │  ├─ main.jsx
 │  └─ output.css
 ├─ tailwind.config.js
+├─ tree.md
 └─ vite.config.js
 
 ```
