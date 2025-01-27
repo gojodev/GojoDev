@@ -32,7 +32,7 @@ function App() {
       <div className="container-v">
         <Project
           img="./images/caopoints.webp"
-          desc="Shows the easiest way grades that are needed to get into College / University."
+          desc="Shows the easiest way grades that are needed to get into College / University"
           github="https://github.com/gojodev/caopoints"
           webLink="https://caopoints.com/"
           name="Caopoints"
@@ -40,11 +40,26 @@ function App() {
         />
 
         <Project
+          img="./images/jsLogo.png"
+          desc="I mainly handled the backend for an AI trading bot to invest in stocks and cryptos"
+          github="https://github.com/gojodev/3rd-yr-group-project/tree/emmanuel"
+          name="AI Trader"
+          techStack="HTML, CSS, JS, Python, Firebase"
+        />
+
+        <Project
+          img="./images/jsLogo.png"
+          desc="A coding workshop where you can book classes to learn more about coding"
+          github="https://github.com/gojodev/Server-Side-Web-Development"
+          name="Coding Workshop"
+          techStack="HTML, CSS, JS, MongoDB"
+        />
+        <Project
           img="./images/swipeBack.png"
-          desc="An extension for finger gestures to navigate tabs in Opera GX (Coming Soon)"
+          desc="A chrome extension for finger gestures to navigate tabs in Opera GX (Coming Soon)"
           github="https://github.com/gojodev/swipeBack"
           name="SwipeBack"
-          techStack="HTML, CSS, JS"
+          techStack="HTML, CSS, JS, Manifest"
         />
 
         <Project
@@ -54,6 +69,23 @@ function App() {
           webLink="https://sfx.rocks"
           name="Sfx.rocks"
           techStack="HTML, CSS, JS, Firebase"
+        />
+
+        <Project
+          img="./images/cLogo.png"
+          desc="Space Explorer game to find the life-changing planet before you run out of fuel"
+          github="https://github.com/gojodev/SpaceExplorer"
+          name="Space Explorer"
+          techStack="C"
+        />
+
+        <Project
+          img="./images/gojodev.webp"
+          desc="The source code for this portfolio website"
+          github="https://github.com/gojodev/gojodev"
+          webLink="https://gojodev.com"
+          name="gojodev.com"
+          techStack="HTML, CSS, JS, React, Tailwind, Firebase"
         />
 
         <Project
