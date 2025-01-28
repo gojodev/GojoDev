@@ -101,7 +101,7 @@ function App() {
           github="https://github.com/gojodev/gojodev"
           webLink="https://gojodev.com"
           name="gojodev.com"
-          techStack="HTML, CSS, JS, NodeJs, React, Tailwind, Firebase"
+          techStack="HTML, CSS, JS, TS, NodeJs, React, Tailwind, Firebase"
         />
       </div>
 
