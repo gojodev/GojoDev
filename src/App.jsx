@@ -1,11 +1,9 @@
 import "./output.css";
 import Footer from "./components/Footer";
 import GojoDev from "./components/GojoDev.jsx";
-import MetaTags from "./components/MetaTags.tsx";
 import "./components/Welcome";
 import Welcome from "./components/Welcome";
 
-import { HelmetProvider } from "react-helmet-async";
 import Project from "./components/Project.tsx";
 
 function App() {
@@ -107,10 +105,7 @@ function App() {
 
       <br />
 
-      <HelmetProvider>
-        <MetaTags />
-        <Footer />
-      </HelmetProvider>
+      <Footer />
     </div>
   );
 }
