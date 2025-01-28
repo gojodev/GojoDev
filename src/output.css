@@ -562,14 +562,6 @@ video {
   margin-top: 0.75rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -582,10 +574,6 @@ video {
   height: 250px;
 }
 
-.min-h-\[150px\] {
-  min-height: 150px;
-}
-
 .w-\[100\%\] {
   width: 100%;
 }
@@ -594,20 +582,24 @@ video {
   width: 250px;
 }
 
-.w-\[30\%\] {
-  width: 30%;
-}
-
-.w-\[33\%\] {
-  width: 33%;
-}
-
 .w-\[50\%\] {
   width: 50%;
 }
 
-.w-\[80\%\] {
-  width: 80%;
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.scale-95 {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-scale-95 {
+  --tw-scale-x: -.95;
+  --tw-scale-y: -.95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .rounded-bl-3xl {
@@ -623,12 +615,22 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
 * {
@@ -660,7 +662,6 @@ video {
   background-color: var(--black);
   padding: 10px;
   transition: 0.2s;
-  box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 .hoverEffect {
@@ -698,7 +699,6 @@ video {
 }
 
 .Image-comp {
-  border: 5px solid var(--black);
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -707,16 +707,13 @@ video {
   border-radius: 20px;
 }
 
-.rbbl {
-  border-bottom-left: 20px;
-}
-
 .center {
   display: flex;
   align-items: center;
   margin: auto;
 }
 
+.intro-container,
 .container-v {
   display: flex;
   flex-direction: column;
@@ -744,9 +741,9 @@ svg:hover {
 }
 
 .generalText {
-  font-size: larger;
   font-weight: bold;
   text-align: center;
+  font-size: 20px;
 }
 
 footer {
@@ -780,4 +777,25 @@ footer {
 path {
   color: var(--white);
   transition: all 0.2s;
+}
+
+.width33 {
+  width: 100%;
+}
+
+/* Desktop  */
+
+@media only screen and (min-width: 500px) {
+  .width33 {
+    width: 33%;
+  }
+
+  .intro-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.img-border {
+  border: 3px solid black;
 }

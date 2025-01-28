@@ -9,9 +9,11 @@ Portfolio
 ├─ public
 │  ├─ images
 │  │  ├─ caopoints.webp
+│  │  ├─ cLogo.png
 │  │  ├─ emmanuel.webp
 │  │  ├─ favicon.ico
 │  │  ├─ gojodev.webp
+│  │  ├─ jsLogo.png
 │  │  ├─ questionMark.webp
 │  │  ├─ sfx_rocks.webp
 │  │  └─ swipeBack.png

@@ -33,7 +33,6 @@
   background-color: var(--black);
   padding: 10px;
   transition: 0.2s;
-  box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 .hoverEffect {
@@ -71,16 +70,11 @@
 }
 
 .Image-comp {
-  border: 5px solid var(--black);
   object-fit: cover;
 }
 
 .rb20px {
   border-radius: 20px;
-}
-
-.rbbl {
-  border-bottom-left: 20px;
 }
 
 .center {
@@ -89,6 +83,7 @@
   margin: auto;
 }
 
+.intro-container,
 .container-v {
   display: flex;
   flex-direction: column;
@@ -116,9 +111,9 @@ svg:hover {
 }
 
 .generalText {
-  font-size: larger;
   font-weight: bold;
   text-align: center;
+  font-size: 20px;
 }
 
 footer {
@@ -149,8 +144,28 @@ footer {
   transform: scale(1.05);
 }
 
-
 path {
   color: var(--white);
   transition: all 0.2s;
+}
+
+.width33 {
+  width: 100%;
+}
+
+/* Desktop  */
+@media only screen and (min-width: 500px) {
+  .width33 {
+    width: 33%;
+  }
+
+  .intro-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+.img-border {
+  border: 3px solid black;
 }

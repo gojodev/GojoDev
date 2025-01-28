@@ -33,7 +33,7 @@ const Welcome = () => {
   }, []);
 
   return (
-    <div className="generalBlackBG container-v w-[30%] rounded-br-3xl">
+    <div className="generalBlackBG container-v rounded-br-3xl width33">
       <div>
         <h3 className="white generalText">Hi, I'm </h3>
         <h3 className={`gradient-text ${fadeClass} generalText`}>

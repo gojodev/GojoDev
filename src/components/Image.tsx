@@ -11,7 +11,7 @@ const Image = ({ src, dim = "200px" }: Props) => {
       <img
         src={src}
         alt="Image"
-        className="Image-comp fadeIn rb20px box-shadow"
+        className="Image-comp fadeIn rb20px img-border"
         width={dim}
         height={dim}
       />
