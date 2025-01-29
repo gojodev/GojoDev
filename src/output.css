@@ -770,6 +770,7 @@ path {
   transition: all 0.2s;
 }
 
+.self-desc,
 .width33 {
   width: 100%;
 }
@@ -779,6 +780,10 @@ path {
 @media only screen and (min-width: 500px) {
   .width33 {
     width: 33%;
+  }
+
+  .self-desc {
+    width: 34%;
   }
 
   .intro-container {

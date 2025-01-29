@@ -146,6 +146,7 @@ path {
   transition: all 0.2s;
 }
 
+.self-desc,
 .width33 {
   width: 100%;
 }
@@ -156,12 +157,15 @@ path {
     width: 33%;
   }
 
+  .self-desc {
+    width: 34%;
+  }
+
   .intro-container {
     display: flex;
     flex-direction: row;
   }
 }
-
 
 .img-border {
   border: 3px solid black;

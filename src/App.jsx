@@ -17,7 +17,7 @@ function App() {
         <br />
 
         {/* // todo make this div use the full 33% */}
-        <div className="generalBlackBG white generalText center width33 rounded-bl-3xl">
+        <div className="generalBlackBG white generalText center self-desc rounded-bl-3xl">
           {
             "I create helpful websites and programming scripts. I make projects about things that I want to improve or interest me."
           }
