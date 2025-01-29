@@ -586,6 +586,10 @@ video {
   width: 50%;
 }
 
+.w-\[95\%\] {
+  width: 95%;
+}
+
 .rounded-bl-3xl {
   border-bottom-left-radius: 1.5rem;
 }
@@ -610,6 +614,10 @@ video {
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-black {
@@ -694,7 +702,6 @@ video {
 .center {
   display: flex;
   align-items: center;
-  margin: auto;
 }
 
 .intro-container,

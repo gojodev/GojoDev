@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHouse,
+  faEnvelope,
+  faCheck,
+} from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faHouse, faLinkedin, faGithub, faEnvelope);
+library.add(faHouse, faLinkedin, faGithub, faEnvelope, faCheck);
 
 const Welcome = () => {
   const [currentText, setCurrentText] = useState("a programmer");
   const [fadeClass, setFadeClass] = useState("fadeIn");
+  const [isCopied, setIsCopied] = useState(false);
   const phrases = ["a programmer", "a gamer", "GojoDev"];
   let index = 0;
 
@@ -29,8 +33,17 @@ const Welcome = () => {
       }, 0);
     }, 2000);
 
-    () => clearInterval(intervalId);
+    return () => clearInterval(intervalId);
   }, []);
+
+  const handleEmailClick = () => {
+    navigator.clipboard.writeText("gojo@gojodev.com");
+    setIsCopied(true);
+
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 1500);
+  };
 
   return (
     <div className="generalBlackBG container-v rounded-br-3xl width33">
@@ -49,17 +62,13 @@ const Welcome = () => {
               className="pulseAnimation"
             />
           </a>
-        </div>
 
-        <div className="center">
-          <div className="center">            
-          <h2 className="white generalText blueText">gojo@gojodev.com</h2>
           <FontAwesomeIcon
-            icon={["fas", "envelope"]}
+            icon={isCopied ? ["fas", "check"] : ["fas", "envelope"]}
             size="2x"
             className="pulseAnimation"
+            onClick={handleEmailClick}
           />
-          </div>
         </div>
       </div>
     </div>

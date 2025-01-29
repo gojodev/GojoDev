@@ -16,12 +16,11 @@ function App() {
         <GojoDev />
         <br />
 
-        <div className="generalBlackBG white generalText container-v width33 rounded-bl-3xl">
-          <div className="center">
-            {
-              "I create helpful websites and programming scripts. I make projects about things that I want to improve or interest me."
-            }
-          </div>
+        {/* // todo make this div use the full 33% */}
+        <div className="generalBlackBG white generalText center width33 rounded-bl-3xl">
+          {
+            "I create helpful websites and programming scripts. I make projects about things that I want to improve or interest me."
+          }
         </div>
       </div>
 
@@ -37,7 +36,7 @@ function App() {
           github="https://github.com/gojodev/caopoints"
           webLink="https://caopoints.com/"
           name="Caopoints"
-          techStack="HTML, CSS, JS, NodeJs, Firebase"
+          techStack="HTML, CSS, JS, NodeJS, Firebase"
         />
 
         <br />
@@ -47,7 +46,7 @@ function App() {
           desc="I mainly handled the backend for an AI trading bot to invest in stocks and cryptos"
           github="https://github.com/gojodev/3rd-yr-group-project/tree/emmanuel"
           name="AI Trader"
-          techStack="HTML, CSS, JS, NodeJs, Python, Firebase"
+          techStack="HTML, CSS, JS, NodeJS, Python, Firebase"
         />
 
         <br />
@@ -57,7 +56,7 @@ function App() {
           desc="A coding workshop where you can book classes to learn more about coding"
           github="https://github.com/gojodev/Server-Side-Web-Development"
           name="Coding Workshop"
-          techStack="HTML, CSS, JS, NodeJs, MongoDB"
+          techStack="HTML, CSS, JS, NodeJS, MongoDB"
         />
 
         <br />
@@ -67,7 +66,7 @@ function App() {
           desc="A chrome extension for finger gestures to navigate tabs in Opera GX (Coming Soon)"
           github="https://github.com/gojodev/swipeBack"
           name="SwipeBack"
-          techStack="HTML, CSS, JS, NodeJs, Manifest"
+          techStack="HTML, CSS, JS, NodeJS, Manifest"
         />
 
         <br />
@@ -78,7 +77,7 @@ function App() {
           github="https://github.com/gojodev/sfx.rocks"
           webLink="https://sfx.rocks"
           name="Sfx.rocks"
-          techStack="HTML, CSS, JS, NodeJs, Firebase"
+          techStack="HTML, CSS, JS, NodeJS, Firebase"
         />
 
         <br />
@@ -99,7 +98,7 @@ function App() {
           github="https://github.com/gojodev/gojodev"
           webLink="https://gojodev.com"
           name="gojodev.com"
-          techStack="HTML, CSS, JS, TS, NodeJs, React, Tailwind, Firebase"
+          techStack="HTML, CSS, JS, TS, NodeJS, React, Tailwind, Firebase"
         />
       </div>
 

@@ -28,8 +28,6 @@
 
 .generalBlackBG {
   text-align: center;
-  transition: 0.5s;
-
   background-color: var(--black);
   padding: 10px;
   transition: 0.2s;
@@ -80,7 +78,6 @@
 .center {
   display: flex;
   align-items: center;
-  margin: auto;
 }
 
 .intro-container,

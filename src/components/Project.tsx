@@ -26,21 +26,21 @@ const Project = ({
   const webLinkStyle = webLink == undefined ? "hidden" : "inline-block";
   const githubStyle = github == undefined ? "hidden" : "inline-block";
   return (
-    <div className="center generalBlackBG box-shadow w-[100%]">
+    <div className="center generalBlackBG box-shadow w-[95%] m-auto rb20px">
       <div className="container-v w-[250px] h-[250px]">
-        <div className="center ">
-          <div className="center">
+        <div className="center">
+          <div className="m-auto">
             <Image src={img} dim="150px" />
           </div>
         </div>
         <div className="center generalText white bg-white p-2 rb20px mt-3 box-shadow">
-          <div className="center text-black">{name}</div>
+          <div className="text-black m-auto">{name}</div>
         </div>
       </div>
 
-      <div className="container-v white rb20px center">
-        <div className="m-auto w-[100%]">
-          <div className="generalText">{desc}</div>
+      <div className="container-v white rb20px m-auto">
+        <div className="w-[100%]">
+          <div className="generalText text-center">{desc}</div>
           <div className="container-h center">
             <div className="w-[50%]">
               <a href={github} target="_blank">

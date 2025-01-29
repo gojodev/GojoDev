@@ -10,7 +10,7 @@ const GojoDev = () => {
   const age = time_diff.toFixed(3);
 
   return (
-    <div className="container-h center width33">
+    <div className="center width33">
       <div className="box-shadow rb20px">
         <Image src="./images/gojodev.webp" className="center" />
       </div>
