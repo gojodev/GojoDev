@@ -1,18 +1,6 @@
-import { useEffect, useState } from "react";
 import Image from "./Image";
 
 const GojoDev = () => {
-  const [status, setStatus] = useState(true);
-
-  const avater = "./images/gojodev.webp";
-  const pfp = "./images/emmanuel.webp";
-
-  useEffect(() => {
-    setTimeout(() => {
-      setStatus(!status);
-    }, 3500);
-  }, [status, setStatus]);
-
   const bday = new Date("06/08/2004");
   const today = new Date();
 
@@ -24,7 +12,7 @@ const GojoDev = () => {
   return (
     <div className="container-h center width33">
       <div className="box-shadow rb20px">
-        <Image src={status ? avater : pfp} className="center" />
+        <Image src="./images/gojodev.webp" className="center" />
       </div>
       <div className="center">
         <h2 className="generalText">Emmanuel Koledoye (~{age})</h2>

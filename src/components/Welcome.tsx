@@ -42,13 +42,6 @@ const Welcome = () => {
         <h3 className="white generalText">Software Development Student</h3>
 
         <div>
-          <a href="https://www.linkedin.com/in/emmanuelk421" target="_blank">
-            <FontAwesomeIcon
-              icon={["fab", "linkedin"]}
-              size="2x"
-              className="pulseAnimation"
-            />
-          </a>
           <a href="https://github.com/gojodev/GojoDev" target="_blank">
             <FontAwesomeIcon
               icon={["fab", "github"]}
