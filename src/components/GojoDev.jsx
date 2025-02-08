@@ -11,10 +11,10 @@ const GojoDev = () => {
 
   return (
     <div className="center width33">
-      <div className="box-shadow rb20px">
-        <Image src="./images/gojodev.webp" className="center" />
+      <div className="box-shadow rb20px m-auto">
+        <Image src="./images/gojodev.webp"/>
       </div>
-      <div className="center">
+      <div className="m-auto">
         <h2 className="generalText">Emmanuel Koledoye (~{age})</h2>
       </div>
     </div>
