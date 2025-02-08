@@ -63,8 +63,9 @@ function App() {
 
         <Project
           img="./images/swipeBack.png"
-          desc="A chrome extension for finger gestures to navigate tabs in Opera GX (Coming Soon)"
+          desc="A chrome extension for finger gestures to navigate tabs in Opera GX"
           github="https://github.com/gojodev/swipeBack"
+          webLink="https://chromewebstore.google.com/detail/swipeback/kajimfcbamhmbgkdfpbedcianbeobnck"
           name="SwipeBack"
           techStack="HTML, CSS, JS, NodeJS, Manifest"
         />
