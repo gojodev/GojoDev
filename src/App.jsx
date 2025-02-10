@@ -1,10 +1,10 @@
 import "./output.css";
 import Footer from "./components/Footer";
 import GojoDev from "./components/GojoDev.jsx";
-import "./components/Welcome";
 import Welcome from "./components/Welcome";
-
 import Project from "./components/Project.tsx";
+import Image from "./components/Image";
+import Nimbus from "./components/nimbus.jsx";
 
 function App() {
   return (
@@ -16,11 +16,23 @@ function App() {
         <GojoDev />
         <br />
 
-        {/* // todo make this div use the full 33% */}
         <div className="generalBlackBG white generalText center self-desc rounded-bl-3xl">
           {
             "I create helpful websites and programming scripts. I make projects about things that I want to improve or interest me."
           }
+        </div>
+      </div>
+
+      <br />
+
+      <div className="center">
+        <div className="m-auto">
+          <Image src="./images/Nimbus-Logo.png" dim="300" className="m-auto" />
+          <br />
+          <h2 className="generalText">Internship Completion:</h2>
+
+          <Nimbus />
+
         </div>
       </div>
 
