@@ -3,8 +3,7 @@ import Footer from "./components/Footer";
 import GojoDev from "./components/GojoDev.jsx";
 import Welcome from "./components/Welcome";
 import Project from "./components/Project.tsx";
-import Image from "./components/Image";
-import Nimbus from "./components/nimbus.jsx";
+import Nimbus from "./components/Nimbus.jsx";
 
 function App() {
   return (
@@ -25,16 +24,7 @@ function App() {
 
       <br />
 
-      <div className="center">
-        <div className="m-auto">
-          <Image src="./images/Nimbus-Logo.png" dim="300" className="m-auto" />
-          <br />
-          <h2 className="generalText">Internship Completion:</h2>
-
-          <Nimbus />
-
-        </div>
-      </div>
+      <Nimbus />
 
       <br />
 

@@ -1600,14 +1600,6 @@ input[type="range"]::-ms-fill-lower {
   width: max-content;
 }
 
-.w-\[\] {
-  width: ;
-}
-
-.w-\[45\%\] {
-  width: 45%;
-}
-
 .min-w-11 {
   min-width: 2.75rem;
 }
@@ -2845,6 +2837,10 @@ input[type="range"]::-ms-fill-lower {
   padding: 1.5rem;
 }
 
+.p-10 {
+  padding: 2.5rem;
+}
+
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -3348,11 +3344,6 @@ input[type="range"]::-ms-fill-lower {
 .text-yellow-900 {
   --tw-text-opacity: 1;
   color: rgb(99 49 18 / var(--tw-text-opacity, 1));
-}
-
-.text-blue-100 {
-  --tw-text-opacity: 1;
-  color: rgb(225 239 254 / var(--tw-text-opacity, 1));
 }
 
 .underline {
