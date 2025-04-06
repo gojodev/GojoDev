@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "./Image";
+import "../style.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -23,8 +24,17 @@ const Project = ({
   name,
   techStack,
 }: Props) => {
-  const webLinkStyle = webLink == undefined ? "hidden" : "inline-block";
-  const githubStyle = github == undefined ? "hidden" : "inline-block";
+  const [webLinkStyle, setWebLinkStyle] = useState("");
+  const [githubStyle, setGithubStyle] = useState("");
+  useEffect(() => {
+    const webLinkStyle = webLink == undefined ? "hide" : "inline-block";
+    const githubStyle = github == undefined ? "hide" : "inline-block";
+
+    setWebLinkStyle(webLinkStyle);
+    setGithubStyle(githubStyle);
+    console.log("name, define? : ", name, webLink);
+  }, []);
+
   return (
     <div className="center generalBlackBG box-shadow w-[95%] m-auto rb20px">
       <div className="container-v w-[250px] h-[250px]">

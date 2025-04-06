@@ -54,22 +54,22 @@ function App() {
         <br />
 
         <Project
-          img="./images/jsLogo.png"
-          desc="A coding workshop where you can book classes to learn more about coding"
-          github="https://github.com/gojodev/Server-Side-Web-Development"
-          name="Coding Workshop"
-          techStack="HTML, CSS, JS, NodeJS, MongoDB"
-        />
-
-        <br />
-
-        <Project
           img="./images/swipeBack.png"
           desc="A chrome extension for finger gestures to navigate tabs in Opera GX"
           github="https://github.com/gojodev/swipeBack"
           webLink="https://chromewebstore.google.com/detail/swipeback/kajimfcbamhmbgkdfpbedcianbeobnck"
           name="SwipeBack"
           techStack="HTML, CSS, JS, NodeJS, Manifest"
+        />
+
+        <br />
+
+        <Project
+          img="./images/jsLogo.png"
+          desc="A coding workshop where you can book classes to learn more about coding"
+          github="https://github.com/gojodev/Server-Side-Web-Development"
+          name="Coding Workshop"
+          techStack="HTML, CSS, JS, NodeJS, MongoDB"
         />
 
         <br />
