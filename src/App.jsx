@@ -1,4 +1,4 @@
-import "./index.css";
+import "./style.css";
 import Footer from "./components/Footer";
 import GojoDev from "./components/GojoDev.jsx";
 import Welcome from "./components/Welcome";
