@@ -25,7 +25,7 @@ function LinearProgressWithLabel(
 export default function LinearWithValueLabel() {
   const start = new Date("2025-02-04T00:00:00Z").getTime();
   const end = new Date("2025-08-31T00:00:00Z").getTime();
-  const now = new Date("2025-02-10T00:00:00Z").getTime();
+  const now = new Date().getTime();
 
   const progress = (((now - start) / (end - start)) * 100).toFixed(1);
 
