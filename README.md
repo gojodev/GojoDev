@@ -25,7 +25,7 @@ I have a strong interest in backend infrastructure. In my free time I love creat
 ## 📈 Stats
 ![GojoDev's github stats](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=GojoDev&show_icons=true&theme=radical)
 
-![GojoDev's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=gojodev&theme=radical)
+![GojoDev's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=GojoDev&theme=radical)
 
 
 ## ✈️ Contact Me
