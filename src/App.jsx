@@ -44,6 +44,16 @@ function App() {
         <br />
 
         <Project
+          img="./images/verseFinderLogo.png"
+          desc="Speak naturally into your microphone and let VerseFinder instantly return the most relevant scriptures based on what you say — in real time."
+          webLink="https://versefinder.dev/"
+          name="VerseFinder"
+          techStack="JS, ReactJS, NodeJS, Firebase"
+        />
+
+        <br />
+
+        <Project
           img="./images/jsLogo.png"
           desc="I mainly handled the backend for an AI trading bot to invest in stocks and cryptos"
           github="https://github.com/gojodev/3rd-yr-group-project/tree/emmanuel"
