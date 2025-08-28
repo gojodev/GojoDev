@@ -23,7 +23,7 @@ I have a strong interest in backend infrastructure. In my free time I love creat
 [<img src="https://banner2.cleanpng.com/20190516/jxv/kisspng-computer-icons-portable-network-graphics-scalable-unity-icon-of-glyph-style-available-in-svg-png-1713892606875.webp" height="50">](https://unity.com)
 
 ## 📈 Stats
-![GojoDev's github stats](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=GojoDev&show_icons=true&theme=radical)
+<!--![GojoDev's github stats](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=GojoDev&show_icons=true&theme=radical) -->
 
 ![GojoDev's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=GojoDev&theme=radical)
 
