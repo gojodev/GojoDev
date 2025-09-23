@@ -21,10 +21,10 @@ function App() {
           }
         </div>
       </div>
-
+{/* 
       <br />
 
-      <Nimbus />
+      <Nimbus /> */}
 
       <br />
 
