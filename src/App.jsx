@@ -21,7 +21,7 @@ function App() {
           }
         </div>
       </div>
-{/* 
+      {/* 
       <br />
 
       <Nimbus /> */}
@@ -33,22 +33,22 @@ function App() {
 
       <div className="container-v">
         <Project
+          img="./images/verseFinderLogo.png"
+          desc="Whether you're preaching, praying, or pondering, VerseFinder helps connect your words with the Word."
+          webLink="https://versefinder.dev/"
+          name="VerseFinder"
+          techStack="JS, ReactJS, NodeJS, Firebase"
+        />
+
+        <br />
+
+        <Project
           img="./images/caopoints.webp"
           desc="Shows the easiest way grades that are needed to get into College / University"
           github="https://github.com/gojodev/caopoints"
           webLink="https://caopoints.com/"
           name="Caopoints"
           techStack="HTML, CSS, JS, NodeJS, Firebase"
-        />
-
-        <br />
-
-        <Project
-          img="./images/verseFinderLogo.png"
-          desc="Speak naturally into your microphone and let VerseFinder instantly return the most relevant scriptures based on what you say — in real time."
-          webLink="https://versefinder.dev/"
-          name="VerseFinder"
-          techStack="JS, ReactJS, NodeJS, Firebase"
         />
 
         <br />
