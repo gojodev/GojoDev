@@ -88,7 +88,7 @@ function App() {
           img="./images/sfx_rocks.webp"
           desc="Soundboard collection with firebase Technologies"
           github="https://github.com/gojodev/sfx.rocks"
-          webLink="https://sfx.rocks"
+          webLink="https://sfx-rocks.web.app"
           name="Sfx.rocks"
           techStack="HTML, CSS, JS, NodeJS, Firebase"
         />
