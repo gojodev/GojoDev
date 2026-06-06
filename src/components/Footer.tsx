@@ -7,7 +7,6 @@ const Footer = () => {
         © {new Date().getFullYear()}{" "}
         <span className="text-[#023cdb] font-bold">GojoDev</span>
       </p>
-      <p className="text-[#252525] text-xs mt-1">built with React + Vite</p>
     </footer>
   );
 };
