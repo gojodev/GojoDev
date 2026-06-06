@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
-    <div>
-    <footer>
-      <h3 className="generalText">
-        &copy; GojoDev {new Date().getFullYear()}
-      </h3>
+    <footer className="border-t border-[#1a1a1a] py-8 text-center">
+      <p className="text-[#333] text-xs">
+        © {new Date().getFullYear()}{" "}
+        <span className="text-[#023cdb] font-bold">GojoDev</span>
+      </p>
+      <p className="text-[#252525] text-xs mt-1">built with React + Vite</p>
     </footer>
-  </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
