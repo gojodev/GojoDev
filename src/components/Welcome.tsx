@@ -55,7 +55,7 @@ const Welcome = () => {
         </AnimatePresence>
       </div>
 
-      <p className="text-[#555] text-sm mb-8">Software Development Student</p>
+      <p className="text-[#555] text-sm mb-8">Software Developer</p>
 
       <div className="flex items-center gap-5">
         <a
@@ -65,7 +65,7 @@ const Welcome = () => {
           className="text-[#555] hover:text-[#023cdb] transition-colors duration-200"
         >
           <motion.span whileHover={{ scale: 1.2, y: -2 }} style={{ display: "inline-block" }}>
-            <FontAwesomeIcon icon={["fab", "github"]} size="lg" />
+            <FontAwesomeIcon icon={["fab", "github"]} size="xl" />
           </motion.span>
         </a>
 
@@ -78,7 +78,7 @@ const Welcome = () => {
         >
           <FontAwesomeIcon
             icon={isCopied ? ["fas", "check"] : ["fas", "envelope"]}
-            size="lg"
+            size="xl"
           />
         </motion.button>
 
