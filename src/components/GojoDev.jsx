@@ -15,12 +15,12 @@ const GojoDev = () => {
     >
       <div className="relative mb-4">
         <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-[#023cdb]/20 via-[#023cdb]/5 to-transparent blur-xl pointer-events-none" />
-        <div className="relative rounded-2xl overflow-hidden border border-[#262626]">
+        <div className="relative rounded-2xl overflow-hidden">
           <Image src="./images/gojodev.webp" />
         </div>
       </div>
       <p className="text-white font-bold text-sm mt-1">Emmanuel Koledoye</p>
-      <p className="text-[#444] text-xs mt-0.5">~{age} yrs</p>
+      <p className="text-[#939490] text-xs mt-0.5">~{age} yrs</p>
     </motion.div>
   );
 };

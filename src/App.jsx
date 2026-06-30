@@ -19,7 +19,7 @@ function App() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex items-center justify-center p-8 md:w-1/3"
           >
-            <p className="text-[#444] text-sm text-center leading-loose max-w-xs">
+            <p className="text-[#939490] text-sm text-center leading-loose max-w-xs">
               I create helpful websites and programming scripts. I make projects
               about things that I want to improve or interest me.
             </p>
@@ -35,7 +35,7 @@ function App() {
           viewport={{ once: true }}
           className="mb-10"
         >
-          <p className="text-[#333] text-xs tracking-widest mb-1">$ ls projects/</p>
+          <p className="text-xs tracking-widest mb-1"><span className="text-green-400">$</span><span className="text-white"> ls projects/</span></p>
           <h2 className="text-white text-xl font-bold">Projects</h2>
           <div className="h-px bg-gradient-to-r from-[#023cdb]/60 to-transparent mt-2 w-32" />
         </motion.div>
@@ -72,19 +72,19 @@ function App() {
             techStack="HTML, CSS, JS, NodeJS, Manifest"
           />
           <Project
-            img="./images/jsLogo.png"
-            desc="A coding workshop where you can book classes to learn more about coding"
-            github="https://github.com/gojodev/Server-Side-Web-Development"
-            name="Coding Workshop"
-            techStack="HTML, CSS, JS, NodeJS, MongoDB"
-          />
-          <Project
             img="./images/sfx_rocks.webp"
             desc="Soundboard collection with Firebase technologies"
             github="https://github.com/gojodev/sfx.rocks"
             webLink="https://sfx-rocks.web.app"
             name="Sfx.rocks"
             techStack="HTML, CSS, JS, NodeJS, Firebase"
+          />
+          <Project
+            img="./images/jsLogo.png"
+            desc="A coding workshop where you can book classes to learn more about coding"
+            github="https://github.com/gojodev/Server-Side-Web-Development"
+            name="Coding Workshop"
+            techStack="HTML, CSS, JS, NodeJS, MongoDB"
           />
           <Project
             img="./images/cLogo.png"

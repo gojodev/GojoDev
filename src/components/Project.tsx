@@ -33,7 +33,7 @@ const Project = ({ img, desc, github, webLink, name, techStack }: Props) => {
       transition={{ duration: 0.35, ease: "easeOut" }}
       onClick={handleCardClick}
       className="cursor-pointer flex flex-col bg-[#0a0a0a] border border-[#1f1f1f] rounded-2xl overflow-hidden
-        hover:border-[#023cdb]/40 hover:shadow-[0_8px_32px_rgba(2,60,219,0.12)]
+        hover:border-white/40 hover:shadow-[0_8px_32px_rgba(255,255,255,0.08)]
         transition-all duration-300"
     >
       {/* Project image */}
@@ -56,7 +56,7 @@ const Project = ({ img, desc, github, webLink, name, techStack }: Props) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="text-[#444] hover:text-white transition-colors duration-200"
+                className="text-[#939490] hover:text-white transition-colors duration-200"
               >
                 <motion.span whileHover={{ scale: 1.2 }} style={{ display: "inline-block" }}>
                   <FontAwesomeIcon icon={["fab", "github"]} />
@@ -69,7 +69,7 @@ const Project = ({ img, desc, github, webLink, name, techStack }: Props) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="text-[#444] hover:text-[#023cdb] transition-colors duration-200"
+                className="text-[#939490] hover:text-[#023cdb] transition-colors duration-200"
               >
                 <motion.span whileHover={{ scale: 1.2 }} style={{ display: "inline-block" }}>
                   <FontAwesomeIcon icon={["fas", "globe"]} />
@@ -79,7 +79,7 @@ const Project = ({ img, desc, github, webLink, name, techStack }: Props) => {
           </div>
         </div>
 
-        <p className="text-[#555] text-xs leading-relaxed mb-4 flex-1">{desc}</p>
+        <p className="text-[#939490] text-xs leading-relaxed mb-4 flex-1">{desc}</p>
 
         <div className="flex flex-wrap gap-1.5">
           {techList.map((tech) => (

@@ -34,7 +34,7 @@ const Welcome = () => {
       transition={{ duration: 0.5 }}
       className="flex flex-col justify-center p-8 bg-[#0a0a0a] border-b md:border-b-0 md:border-r border-[#1f1f1f] md:w-1/3"
     >
-      <p className="text-[#444] text-xs mb-3 tracking-widest">$ whoami</p>
+      <p className="text-xs mb-3 tracking-widest"><span className="text-green-400">$</span><span className="text-white"> whoami</span></p>
 
       <div className="mb-1">
         <span className="text-white text-2xl font-bold">Hi, I'm </span>
@@ -55,14 +55,14 @@ const Welcome = () => {
         </AnimatePresence>
       </div>
 
-      <p className="text-[#555] text-sm mb-8">Software Developer</p>
+      <p className="text-[#939490] text-sm mb-8">Software Developer</p>
 
       <div className="flex items-center gap-5">
         <a
           href="https://github.com/gojodev/GojoDev"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#555] hover:text-[#023cdb] transition-colors duration-200"
+          className="text-[#939490] hover:text-[#023cdb] transition-colors duration-200"
         >
           <motion.span whileHover={{ scale: 1.2, y: -2 }} style={{ display: "inline-block" }}>
             <FontAwesomeIcon icon={["fab", "github"]} size="xl" />
@@ -73,7 +73,7 @@ const Welcome = () => {
           whileHover={{ scale: 1.2, y: -2 }}
           onClick={handleEmailClick}
           className={`transition-colors duration-200 cursor-pointer border-none bg-transparent p-0 ${
-            isCopied ? "text-green-400" : "text-[#555] hover:text-[#023cdb]"
+            isCopied ? "text-green-400" : "text-[#939490] hover:text-[#023cdb]"
           }`}
         >
           <FontAwesomeIcon
