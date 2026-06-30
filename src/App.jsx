@@ -52,7 +52,7 @@ function App() {
             img="./images/caopoints.webp"
             desc="Shows the easiest way grades that are needed to get into College / University"
             github="https://github.com/gojodev/caopoints"
-            webLink="https://caopoints.web.app"
+            webLink="https://caopoints-info.web.app"
             name="Caopoints"
             techStack="HTML, CSS, JS, NodeJS, Firebase"
           />
