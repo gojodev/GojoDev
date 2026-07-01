@@ -1,11 +1,12 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe, faLock } from "@fortawesome/free-solid-svg-icons";
+import ReactDOM from "react-dom";
 
-library.add(faGithub, faGlobe);
+library.add(faGithub, faGlobe, faLock);
 
 interface Props {
   img: string;
@@ -15,6 +16,95 @@ interface Props {
   name: string;
   techStack: string;
 }
+
+const PrivateGithubIcon = () => {
+  const [hovered, setHovered] = useState(false);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    setMousePos({ x: e.clientX, y: e.clientY });
+  };
+
+  const tooltip = hovered
+    ? ReactDOM.createPortal(
+        <AnimatePresence>
+          <motion.div
+            key="private-tooltip"
+            initial={{ opacity: 0, scale: 0.92, y: 4 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.92, y: 4 }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
+            style={{
+              position: "fixed",
+              left: mousePos.x + 14,
+              top: mousePos.y - 36,
+              pointerEvents: "none",
+              zIndex: 99999,
+            }}
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md
+              bg-[#0f0f0f] border border-[#3f1010] shadow-[0_4px_20px_rgba(0,0,0,0.6)]
+              whitespace-nowrap"
+          >
+            <FontAwesomeIcon
+              icon={["fas", "lock"]}
+              className="text-[#ef4444]"
+              style={{ fontSize: "9px" }}
+            />
+            <span className="text-[10px] font-medium tracking-wide text-[#c0c0c0]">
+              Private Repository
+            </span>
+            <span className="text-[10px] text-[#5a5a5a] mx-0.5">·</span>
+            <span className="text-[10px] text-[#5a5a5a]">
+              Source code is not publicly available
+            </span>
+          </motion.div>
+        </AnimatePresence>,
+        document.body
+      )
+    : null;
+
+  return (
+    <>
+      <span
+        className="relative inline-block cursor-default select-none"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        onMouseMove={handleMouseMove}
+        style={{ lineHeight: 1 }}
+      >
+        {/* GitHub icon — transitions to red on hover */}
+        <motion.span
+          animate={{ color: hovered ? "#ef4444" : "#939490" }}
+          transition={{ duration: 0.22, ease: "easeOut" }}
+          style={{ display: "inline-block" }}
+        >
+          <FontAwesomeIcon icon={["fab", "github"]} />
+        </motion.span>
+
+        {/* Strikethrough line — draws left to right on hover */}
+        <motion.span
+          initial={false}
+          animate={{ scaleX: hovered ? 1 : 0 }}
+          transition={{ duration: 0.28, ease: "easeOut" }}
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "-12%",
+            width: "124%",
+            height: "1.5px",
+            borderRadius: "1px",
+            backgroundColor: "#ef4444",
+            transformOrigin: "left center",
+            transform: "translateY(-50%) rotate(-8deg)",
+            pointerEvents: "none",
+          }}
+        />
+      </span>
+
+      {tooltip}
+    </>
+  );
+};
 
 const Project = ({ img, desc, github, webLink, name, techStack }: Props) => {
   const techList = techStack.split(", ").map((t) => t.trim());
@@ -50,7 +140,7 @@ const Project = ({ img, desc, github, webLink, name, techStack }: Props) => {
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-white font-bold text-sm leading-tight pr-2">{name}</h3>
           <div className="flex gap-3 shrink-0">
-            {github && (
+            {github ? (
               <a
                 href={github}
                 target="_blank"
@@ -62,6 +152,10 @@ const Project = ({ img, desc, github, webLink, name, techStack }: Props) => {
                   <FontAwesomeIcon icon={["fab", "github"]} />
                 </motion.span>
               </a>
+            ) : (
+              <span onClick={(e) => e.stopPropagation()}>
+                <PrivateGithubIcon />
+              </span>
             )}
             {webLink && (
               <a
