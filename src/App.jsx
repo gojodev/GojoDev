@@ -29,7 +29,7 @@ function App() {
       </section>
 
       {/* Projects */}
-      <section className="max-w-4xl mx-auto px-5 py-14">
+      <section className="max-w-6xl mx-auto px-5 py-14">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -41,7 +41,7 @@ function App() {
           <div className="h-px bg-gradient-to-r from-[#023cdb]/60 to-transparent mt-2 w-32" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <Project
             img="./images/verseFinderLogo.png"
             desc="Whether you're preaching, praying, or pondering, VerseFinder helps connect your words with the Word."
