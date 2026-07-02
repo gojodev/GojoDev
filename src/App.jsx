@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import GojoDev from "./components/GojoDev.jsx";
 import Welcome from "./components/Welcome";
 import Project from "./components/Project.tsx";
+import eufylogsScreenshots from "./data/eufylogsScreenshots.ts";
 
 function App() {
   return (
@@ -62,6 +63,14 @@ function App() {
             github="https://github.com/gojodev/3rd-yr-group-project/tree/emmanuel"
             name="AI Trader"
             techStack="HTML, CSS, JS, NodeJS, Python, Firebase"
+          />
+          <Project
+            img="./images/gojodev.webp"
+            desc="Silent deletions shouldn't be silent — Eufy Logs backs up every event and clip locally so nothing vanishes without your knowledge"
+            privateSite
+            screenshots={eufylogsScreenshots}
+            name="EufyLogs"
+            techStack="React, NodeJS, Raspberry Pi, Firebase, Tailscale"
           />
           <Project
             img="./images/swipeBack.png"

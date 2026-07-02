@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { library, type IconName, type IconPrefix } from "@fortawesome/fontawesome-svg-core";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faGlobe, faLock } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe, faLock, faImages } from "@fortawesome/free-solid-svg-icons";
 import ReactDOM from "react-dom";
+import Lightbox from "./Lightbox";
+import type { Screenshot } from "../data/eufylogsScreenshots";
 
-library.add(faGithub, faGlobe, faLock);
+library.add(faGithub, faGlobe, faLock, faImages);
 
 interface Props {
   img: string;
@@ -15,9 +17,18 @@ interface Props {
   webLink?: string;
   name: string;
   techStack: string;
+  privateSite?: boolean;
+  screenshots?: Screenshot[];
 }
 
-const PrivateGithubIcon = ({ show }: { show: boolean }) => {
+interface PrivateIconProps {
+  show: boolean;
+  icon: [IconPrefix, IconName];
+  title: string;
+  subtitle: string;
+}
+
+const PrivateIcon = ({ show, icon, title, subtitle }: PrivateIconProps) => {
   const [iconHovered, setIconHovered] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
@@ -26,23 +37,23 @@ const PrivateGithubIcon = ({ show }: { show: boolean }) => {
       <AnimatePresence>
         {show && (
           <motion.span
-            key="private-github"
+            key="private-icon"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
             className="relative inline-block cursor-default select-none"
-            style={{ lineHeight: 1, color: "#ef4444" }}
+            style={{ lineHeight: 1, color: "#ef4444", fontSize: "1.35em" }}
             onMouseEnter={() => setIconHovered(true)}
             onMouseLeave={() => setIconHovered(false)}
             onMouseMove={(e) => setMousePos({ x: e.clientX, y: e.clientY })}
           >
-            <FontAwesomeIcon icon={["fab", "github"]} />
+            <FontAwesomeIcon icon={icon} />
 
             {/*
-              Outer span: handles position + 45° rotation (static).
-              Inner motion.span: handles the scaleX draw animation cleanly,
-              without competing with the rotation transform.
+              Outer span: static 45° rotation + position.
+              Inner motion.span: scaleX draw animation only, kept
+              separate so it doesn't fight the rotation transform.
             */}
             <span
               style={{
@@ -50,8 +61,8 @@ const PrivateGithubIcon = ({ show }: { show: boolean }) => {
                 top: "50%",
                 left: "50%",
                 transform: "translate(-50%, -50%) rotate(-45deg)",
-                width: "155%",
-                height: "1.5px",
+                width: "160%",
+                height: "2px",
                 pointerEvents: "none",
                 overflow: "visible",
               }}
@@ -67,6 +78,7 @@ const PrivateGithubIcon = ({ show }: { show: boolean }) => {
                   height: "100%",
                   borderRadius: "1px",
                   backgroundColor: "#ef4444",
+                  boxShadow: "0 0 3px rgba(239,68,68,0.9), 0 0 1px rgba(0,0,0,0.6)",
                   transformOrigin: "left center",
                 }}
               />
@@ -98,12 +110,10 @@ const PrivateGithubIcon = ({ show }: { show: boolean }) => {
                 style={{ fontSize: "9px" }}
               />
               <span className="text-[10px] font-medium tracking-wide text-[#c0c0c0]">
-                Private Repository
+                {title}
               </span>
-              <span className="text-[10px] text-[#5a5a5a] mx-0.5">·</span>
-              <span className="text-[10px] text-[#5a5a5a]">
-                Source code is not publicly available
-              </span>
+              <span className="text-[10px] text-[#939490] mx-0.5">·</span>
+              <span className="text-[10px] text-[#939490]">{subtitle}</span>
             </motion.div>,
             document.body
           )
@@ -112,13 +122,25 @@ const PrivateGithubIcon = ({ show }: { show: boolean }) => {
   );
 };
 
-const Project = ({ img, desc, github, webLink, name, techStack }: Props) => {
+const Project = ({
+  img,
+  desc,
+  github,
+  webLink,
+  name,
+  techStack,
+  privateSite,
+  screenshots,
+}: Props) => {
   const techList = techStack.split(", ").map((t) => t.trim());
   const primaryLink = webLink || github;
+  const hasGallery = Boolean(screenshots && screenshots.length > 0);
   const [cardHovered, setCardHovered] = useState(false);
+  const [galleryOpen, setGalleryOpen] = useState(false);
 
   const handleCardClick = () => {
     if (primaryLink) window.open(primaryLink, "_blank");
+    else if (hasGallery) setGalleryOpen(true);
   };
 
   return (
@@ -163,21 +185,51 @@ const Project = ({ img, desc, github, webLink, name, techStack }: Props) => {
               </a>
             ) : (
               <span onClick={(e) => e.stopPropagation()}>
-                <PrivateGithubIcon show={cardHovered} />
+                <PrivateIcon
+                  show={cardHovered}
+                  icon={["fab", "github"]}
+                  title="Private Repository"
+                  subtitle="Source code is not publicly available"
+                />
               </span>
             )}
-            {webLink && (
+
+            {webLink ? (
               <a
                 href={webLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="text-[#939490] hover:text-[#023cdb] transition-colors duration-200"
+                className="text-[#939490] hover:text-white transition-colors duration-200"
               >
                 <motion.span whileHover={{ scale: 1.2 }} style={{ display: "inline-block" }}>
                   <FontAwesomeIcon icon={["fas", "globe"]} />
                 </motion.span>
               </a>
+            ) : privateSite ? (
+              <span onClick={(e) => e.stopPropagation()}>
+                <PrivateIcon
+                  show={cardHovered}
+                  icon={["fas", "globe"]}
+                  title="Private Deployment"
+                  subtitle="This project is not publicly accessible"
+                />
+              </span>
+            ) : null}
+
+            {hasGallery && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setGalleryOpen(true);
+                }}
+                aria-label="View screenshots"
+                className="text-[#939490] hover:text-white transition-colors duration-200"
+              >
+                <motion.span whileHover={{ scale: 1.2 }} style={{ display: "inline-block" }}>
+                  <FontAwesomeIcon icon={["fas", "images"]} />
+                </motion.span>
+              </button>
             )}
           </div>
         </div>
@@ -195,6 +247,10 @@ const Project = ({ img, desc, github, webLink, name, techStack }: Props) => {
           ))}
         </div>
       </div>
+
+      {galleryOpen && hasGallery && (
+        <Lightbox slides={screenshots as Screenshot[]} onClose={() => setGalleryOpen(false)} />
+      )}
     </motion.div>
   );
 };
