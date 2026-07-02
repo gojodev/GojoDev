@@ -62,7 +62,7 @@ const Welcome = () => {
           href="https://github.com/gojodev/GojoDev"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#939490] hover:text-[#023cdb] transition-colors duration-200"
+          className="text-[#939490] hover:text-white transition-colors duration-200"
         >
           <motion.span whileHover={{ scale: 1.2, y: -2 }} style={{ display: "inline-block" }}>
             <FontAwesomeIcon icon={["fab", "github"]} size="xl" />
@@ -73,7 +73,7 @@ const Welcome = () => {
           whileHover={{ scale: 1.2, y: -2 }}
           onClick={handleEmailClick}
           className={`transition-colors duration-200 cursor-pointer border-none bg-transparent p-0 ${
-            isCopied ? "text-green-400" : "text-[#939490] hover:text-[#023cdb]"
+            isCopied ? "text-green-400" : "text-[#939490] hover:text-white"
           }`}
         >
           <FontAwesomeIcon

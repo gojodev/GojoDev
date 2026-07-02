@@ -105,11 +105,15 @@ const Lightbox = ({ slides, startIndex = 0, onClose }: LightboxProps) => {
           className="flex flex-col items-center max-w-[92vw] max-h-[88vh]"
           onClick={(e) => e.stopPropagation()}
         >
+          {/*
+            Image and caption are one animated unit so they always appear
+            together — otherwise the caption (a plain re-render) would
+            update instantly while the image is still mid-transition,
+            flashing the new caption before the new image is visible.
+          */}
           <AnimatePresence mode="wait" custom={direction}>
-            <motion.img
+            <motion.div
               key={slide.src}
-              src={slide.src}
-              alt={slide.caption}
               custom={direction}
               initial={{ opacity: 0, x: direction >= 0 ? 60 : -60 }}
               animate={{ opacity: 1, x: 0 }}
@@ -119,19 +123,26 @@ const Lightbox = ({ slides, startIndex = 0, onClose }: LightboxProps) => {
               dragConstraints={{ left: 0, right: 0 }}
               dragElastic={0.6}
               onDragEnd={handleDragEnd}
-              className="rounded-lg border border-[#1f1f1f] shadow-[0_8px_40px_rgba(0,0,0,0.6)]
-                max-w-full max-h-[75vh] object-contain cursor-grab active:cursor-grabbing select-none"
-            />
-          </AnimatePresence>
+              className="flex flex-col items-center cursor-grab active:cursor-grabbing select-none"
+            >
+              <img
+                src={slide.src}
+                alt={slide.caption}
+                draggable={false}
+                className="rounded-lg border border-[#1f1f1f] shadow-[0_8px_40px_rgba(0,0,0,0.6)]
+                  max-w-full max-h-[75vh] object-contain pointer-events-none"
+              />
 
-          <div className="mt-4 flex flex-col items-center gap-1.5">
-            <p className="text-white text-sm font-medium tracking-wide">{slide.caption}</p>
-            {slides.length > 1 && (
-              <p className="text-[#5a5a5a] text-xs">
-                {index + 1} / {slides.length}
-              </p>
-            )}
-          </div>
+              <div className="mt-4 flex flex-col items-center gap-1.5">
+                <p className="text-white text-sm font-medium tracking-wide">{slide.caption}</p>
+                {slides.length > 1 && (
+                  <p className="text-[#5a5a5a] text-xs">
+                    {index + 1} / {slides.length}
+                  </p>
+                )}
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </motion.div>
     </AnimatePresence>,
